@@ -56,7 +56,8 @@ public class LibraryDbContext: DbContext
 
     modelBuilder.Entity<Publisher>().HasData(
       new Publisher { PublisherID = 1, PublisherName = "MCU", YearOfPublish = 2000 },
-      new Publisher { PublisherID = 2, PublisherName = "DC", YearOfPublish = 2010 }
+      new Publisher { PublisherID = 2, PublisherName = "DC", YearOfPublish = 2010 },
+      new Publisher { PublisherID = 3, PublisherName = "DCM", YearOfPublish = 2019 }
       
     );
 
