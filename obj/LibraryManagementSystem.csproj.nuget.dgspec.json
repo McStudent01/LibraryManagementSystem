@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\casey\\OneDrive - University of Cincinnati\\2024 Classes\\IT3045C - Contemporary Programming\\Final Proposal\\Final Attempt\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {}
+    "C:\\Users\\hdai2\\Downloads\\Final\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\casey\\OneDrive - University of Cincinnati\\2024 Classes\\IT3045C - Contemporary Programming\\Final Proposal\\Final Attempt\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {
+    "C:\\Users\\hdai2\\Downloads\\Final\\LibraryManagementSystem\\LibraryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\casey\\OneDrive - University of Cincinnati\\2024 Classes\\IT3045C - Contemporary Programming\\Final Proposal\\Final Attempt\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\hdai2\\Downloads\\Final\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
         "projectName": "LibraryManagementSystem",
-        "projectPath": "C:\\Users\\casey\\OneDrive - University of Cincinnati\\2024 Classes\\IT3045C - Contemporary Programming\\Final Proposal\\Final Attempt\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
-        "packagesPath": "C:\\Users\\casey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\casey\\OneDrive - University of Cincinnati\\2024 Classes\\IT3045C - Contemporary Programming\\Final Proposal\\Final Attempt\\LibraryManagementSystem\\obj\\",
+        "projectPath": "C:\\Users\\hdai2\\Downloads\\Final\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
+        "packagesPath": "C:\\Users\\hdai2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hdai2\\Downloads\\Final\\LibraryManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\casey\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hdai2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,15 +39,44 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
             }
           },
           "imports": [
@@ -62,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
