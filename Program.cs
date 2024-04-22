@@ -5,7 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using LibraryManagementSystem.Models; // Import your models namespace here
-using LibraryManagementSystem.Data; // Import your data namespace here
+using LibraryManagementSystem.Database; // Import your data namespace here
+
 
 public class Program
 {
@@ -18,10 +19,10 @@ public class Program
             .AddInteractiveServerComponents();
 
         // Configure Entity Framework Core
-        builder.Services.AddDbContext<LibraryContext>(options =>
+        builder.Services.AddDbContext<LibraryDbContext>(options =>
         {
             // Replace "YourConnectionString" with our actual connection string
-            options.UseSqlServer(builder.Configuration.GetConnectionString("YourConnectionString"));
+            options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
         });
 
         var app = builder.Build();
@@ -39,8 +40,8 @@ public class Program
         app.UseAntiforgery();
 
         // Map Razor Components
-        app.MapRazorComponents<App>()
-            .AddInteractiveServerRenderMode();
+       //app.MapRazorComponents<App>()
+       //.AddInteractiveServerRenderMode();
 
         // Create database schema if it doesn't exist
         using (var scope = app.Services.CreateScope())
@@ -48,7 +49,7 @@ public class Program
             var services = scope.ServiceProvider;
             try
             {
-                var context = services.GetRequiredService<LibraryContext>();
+                var context = services.GetRequiredService<LibraryDbContext>();
                 context.Database.EnsureCreated();
             }
             catch (Exception ex)
